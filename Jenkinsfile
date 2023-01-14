@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh ' sudo  scp  -i -r webapp/dist ubuntu@172.31.35.56:/home/ubuntu/dist'
+                sh '   scp  -i -r webapp/dist ubuntu@172.31.35.56:/home/ubuntu/dist'
             }
         }
     }
