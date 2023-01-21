@@ -1,5 +1,5 @@
 pipeline {
-    agent { any'ssh'}
+    agent any
 
     stages {
         stage('Build') {
