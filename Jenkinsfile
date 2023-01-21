@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent node { node {label 'ssh'} }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building frontend ..'
                   sh 'cd webapp && npm install'
                   sh 'cd webapp && npm run build'
             }
