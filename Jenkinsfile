@@ -1,9 +1,6 @@
 pipeline {
-   " agent any{deploy}"
-      node {
-         label 'deploy'
+   agent any
       
-    }
 
     stages {
         stage('Build') {
@@ -21,6 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+               
                 
             }
         }
