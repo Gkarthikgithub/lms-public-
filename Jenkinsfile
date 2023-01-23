@@ -1,5 +1,5 @@
 pipeline {
-   " agent any{deploy}
+   " agent any{deploy}"
       node {
          label 'deploy'
       
