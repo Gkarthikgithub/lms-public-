@@ -1,8 +1,8 @@
 pipeline {
-   " agent any"{
+   " agent any{deploy}
       node {
          label 'deploy'
-      }
+      
     }
 
     stages {
