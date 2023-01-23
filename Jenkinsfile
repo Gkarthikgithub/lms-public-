@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-               sh 'scp -r /webapp/dist ubuntu@172.31.41.206:/home/ubuntu/dist'
+               sh 'scp -r var/lib/jenkins/webapp/dist ubuntu@172.31.41.206:/home/ubuntu/dist'
                
                 
             }
