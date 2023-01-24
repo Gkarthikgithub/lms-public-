@@ -12,7 +12,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                echo 'building backend..'
+                echo 'building backend...'
                   sh 'cd api && npm install'
                   sh 'cd api && npm run build'
             }
