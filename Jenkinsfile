@@ -10,9 +10,11 @@ pipeline {
                   sh 'cd webapp && npm run build'
             }
         }
-        stage('Test') {
+        stage('build') {
             steps {
-                echo 'Testing...'
+                echo 'building backend..'
+                  sh 'cd api && npm install'
+                  sh 'cd api && npm run build'
             }
         }
         stage('Deploy') {
