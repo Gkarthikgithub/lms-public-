@@ -10,7 +10,7 @@ pipeline {
                   sh 'cd webapp && npm run build'
             }
         }
-        stage('build') {
+        stage('build 2') {
             steps {
                 echo 'building backend...'
                   sh 'cd api && npm install'
