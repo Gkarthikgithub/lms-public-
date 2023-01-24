@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'building backend...'
                   sh 'cd api && npm install'
-                  sh 'cd api && yum  npm install -g pm2'
+                  sh 'cd api &&sudo  yum  npm install -g pm2'
                   sh 'cd api && npx prisma db push'
                   sh 'cd api && npm run build'
                   sh 'cd api && NODE_PORT=8080 pm2 start -i 0 build/index.js'  
