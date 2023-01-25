@@ -26,7 +26,7 @@ pipeline {
                   sh 'cd api && npx prisma db push'
                   sh 'cd api && npm run build'
                   sh 'cd api && NODE_PORT=8080 pm2 start -i 0 build/index.js'  
-                  sh 'cd api && curl http://localhost:8080
+                  sh 'cd api && curl http://localhost:8080'
                
                 
             }
