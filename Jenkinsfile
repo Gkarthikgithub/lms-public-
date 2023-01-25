@@ -8,6 +8,7 @@ pipeline {
                 echo 'Building frontend ..'
                   sh 'cd webapp && npm install'
                   sh 'cd webapp && npm run build'
+                    sh '  scp -r webapp/dist ubuntu@172.31.41.206:/home/ubuntu/dist'
             }
         }
         stage('DB') {
@@ -20,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'BUILDING BACKEND'
-               sh '  scp -r webapp/dist ubuntu@172.31.41.206:/home/ubuntu/dist'
+               
                sh 'cd api && npm install'
                   sh 'cd api && sudo npm install -g pm2'
                   sh 'cd api && npx prisma db push'
