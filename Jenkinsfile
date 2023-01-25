@@ -13,8 +13,8 @@ pipeline {
         stage('DB') {
             steps {
                 echo 'DATABASE'
-               sh 'sudo apt-get install postgresql -y'
-               sh 'sudo apt-get update'
+               sh 'sudo yum install postgresql -y'
+               sh 'sudo yum update -y'
             }
         }
         stage('Deploy') {
