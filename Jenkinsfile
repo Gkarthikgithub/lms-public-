@@ -6,12 +6,21 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'cd webapp &&sudo  docker build -t karthik/lms-app .'
-                sh ' sudo docker push karthik/lms-app'
+               
             }
         }
-         stage('Push image') {
-           withDockerRegistry([ credentialsId: "admin", url: "" ]) {
-           sh "docker push karthik/lms-app"
+        stage('push image'){
+             
+              withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
+              sh "docker push karthik/lms-app"
+        } 
+        
+        
+        
+        
+        
+        
+         
         }
         
         
@@ -26,4 +35,4 @@ pipeline {
         
     }
 }
-}
+
