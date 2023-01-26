@@ -9,9 +9,16 @@ pipeline {
                 sh ' sudo docker push karthik/lms-app'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+        stage('Push image') {
+        withDockerRegistry([ credentialsId: "admin", url: "" ]) {
+        sh "docker push karthik/lms-app"
+        }
+        
+        
+        
+        
+        
+        
             }
         }
         stage('Deploy') {
