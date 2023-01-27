@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'BUILDING BACKEND'
+                echo 'BUILDING BACKEND.'
                
                sh 'cd api && npm install'
                   sh 'cd api && sudo npm install -g pm2'
