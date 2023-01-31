@@ -14,8 +14,8 @@ pipeline {
         stage('DB') {
             steps {
                 echo 'DATABASE'
-               sh ' apt install postgresql -y'
-               sh 'apt update -y'
+               
+               
             }
         }
         stage('Deploy') {
