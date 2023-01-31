@@ -23,7 +23,7 @@ pipeline {
                 echo 'BUILDING BACKEND.'
                
                sh 'cd api && npm install'
-                  sh 'cd api &&  npm install -g pm2'
+                  sh 'cd api && sudo npm install -g pm2'
                   sh 'cd api && npx prisma db push'
                    sh    'cd api &&DATABASE_URL=("postgresql://postgres:password@localhost:5432/postgres")'
                   
