@@ -23,9 +23,7 @@ pipeline {
                 echo 'BUILDING BACKEND.'
                
                sh 'cd api && npm install'
-                  sh 'cd api && sudo npm install -g pm2 --unsafe-perm=true --allow-root'
-                  sh 'cd api && npx prisma db push'
-                   sh    'cd api &&DATABASE_URL=("postgresql://postgres:password@localhost:5432/postgres")'
+                  
                   
                   sh 'cd api && npm run build'
                   sh 'cd api && NODE_PORT=8080 pm2 start -i 0 build/index.js'  
