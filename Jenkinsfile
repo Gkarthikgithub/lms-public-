@@ -14,7 +14,7 @@ pipeline {
         stage('DB') {
             steps {
                 echo 'DATABASE'
-               sh 'sudo yum install postgresql -y'
+               
                
                
             }
