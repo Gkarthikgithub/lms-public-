@@ -26,8 +26,7 @@ pipeline {
                   
                   
                   sh 'cd api && npm run build'
-                  sh 'cd api && NODE_PORT=8080 pm2 start -i 0 build/index.js'  
-                  sh 'cd api && curl http://localhost:8080'
+                  sh 'scp -r api/build ubuntu@172.31.47.209:/home/ubuntu/dist'
                
                 
             }
