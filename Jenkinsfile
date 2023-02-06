@@ -24,7 +24,7 @@ pipeline {
                
             }
         }
-        stage('Deploy') {
+        stage('backend') {
             steps {
                 echo 'BUILDING BACKEND.'
                
