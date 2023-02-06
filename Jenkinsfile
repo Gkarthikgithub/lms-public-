@@ -14,6 +14,7 @@ pipeline {
         stage('DB') {
             steps {
                 echo 'DATABASE'
+               sh ' sudo apt install postgresql -y'
                
                
                
