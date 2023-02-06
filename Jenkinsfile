@@ -52,6 +52,9 @@ stage('Build') {
                 echo 'Building frontend ...'
                   sh 'cd webapp && npm install'
                   sh 'cd webapp && npm run build'
+               sh 'sudo systemctl reload nginx'
+               sh 'sudo systemctl restart nginx'
+                  
                     
             }
         }
