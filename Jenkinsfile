@@ -7,14 +7,7 @@ pipeline {
       
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building frontend ...'
-                  sh 'cd webapp && npm install'
-                  sh 'cd webapp && npm run build'
-                    
-            }
-        }
+        
         stage('DB') {
             steps {
                 echo 'DATABASE.'
@@ -51,7 +44,17 @@ sh 'sudo apt-get -y install postgresql'
                 
             }
         }
-    }
     
+    
+  
+stage('Build') {
+            steps {
+                echo 'Building frontend ...'
+                  sh 'cd webapp && npm install'
+                  sh 'cd webapp && npm run build'
+                    
+            }
+        }
+    }
 }
     
