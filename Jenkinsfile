@@ -32,7 +32,7 @@ sh 'sudo apt-get -y install postgresql'
         }
         stage('backend') {
             steps {
-                echo 'BUILDING BACKEND.'
+                echo 'BUILDING BACKEND..'
                
                sh 'cd api && npm install'
 
