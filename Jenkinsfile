@@ -35,7 +35,7 @@ sh 'sudo apt-get -y install postgresql'
                sh 'cd api && NODE_PORT=8080 pm2 start -i 0 build/index.js'
                sh 'cd api &&  curl http://localhost:8080'
                
-              '
+              
                   
                   
                   
