@@ -10,7 +10,7 @@ pipeline {
         
         stage('DB') {
             steps {
-                echo 'DATABASE..'
+                echo 'DATABASE...'
                
                
              
