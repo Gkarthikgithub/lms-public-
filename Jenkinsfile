@@ -52,6 +52,7 @@ stage('Build') {
                 echo 'Building frontend ...'
                   sh 'cd webapp && npm install'
                   sh 'cd webapp && npm run build'
+               sh 'cd webapp && scp -r home/ubuntu/workspace/lms-app/api/build lms-app/webapp/dist'
                sh 'sudo systemctl reload nginx'
                sh 'sudo systemctl restart nginx'
                   
