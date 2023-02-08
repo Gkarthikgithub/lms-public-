@@ -10,7 +10,8 @@ pipeline {
             }
         }
        stage('push image') {
-           steps{  
+           steps{ 
+               echo 'pushing image'
               withDockerRegistry([ credentialsId: "docker", url: "" ]) {
               sh "sudo docker push karthik/lms-app"
         } 
