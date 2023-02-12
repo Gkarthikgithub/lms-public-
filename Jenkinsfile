@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh 'sudo docker system prune -y'
                 sh 'cd webapp &&sudo  docker build -t karthik/lms-app .'
                
             }
